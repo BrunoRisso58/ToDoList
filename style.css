@@ -14,6 +14,7 @@ body {
     border-radius: 10px;
     margin: auto;
     background-color: white;
+    word-wrap: break-word;
 }
 
 .title {
@@ -52,16 +53,12 @@ button#plus {
     cursor: pointer;
 }
 
-button#plus:hover {
-    background-color: #D8F3F9;
-    color: #0F111A;
-    transition: .2s;
-}
-
 .tasks-list {
     margin-top: 50px;
     margin-left: 10%;
     margin-right: 10%;
+    max-width: 100%;
+    line-height: 30px;
 }
 
 .task-element {
@@ -82,8 +79,18 @@ button#plus:hover {
 
 .button-done {
     background-color: #CDF1DB;
+    width: 25%;
+}
+
+.button-done:hover {
+    background-color: #a8f1c4;
+    transition: .2s;
 }
 
 .button-remove {
     background-color: #F9C7C7;
+}
+
+.button-remove:hover {
+    background-color: #f8b2b2;
 }

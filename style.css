@@ -1,0 +1,58 @@
+* {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+    background-color: #D8F3F9;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.section {
+    width: 70%;
+    height: 80vh;
+    border-radius: 10px;
+    margin: auto;
+    background-color: white;
+}
+
+.title {
+    font-size: 30px;
+    text-align: center;
+    padding: 30px;
+}
+
+.addTask {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+#task {
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    min-width: 50px;
+    width: 40%;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#plus {
+    font-size: 16px;
+    background-color: #0F111A;
+    color: white;
+    border: 0;
+    padding: 12px;
+    border-radius: 10px
+}
+
+#plus:hover {
+    cursor: pointer;
+    background-color: #D8F3F9;
+    color: #0F111A;
+    transition: .2s;
+}

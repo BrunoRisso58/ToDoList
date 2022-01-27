@@ -1,35 +1,43 @@
 class App {
 
     addTask() {
-        let taskName = document.querySelector("#task-name").value;
-        let newTask = new Task(taskName);
+        try {
+            if (document.querySelector("#task-name").value.trim() == "") {
+                throw new Error("Você deve digitar o nome da tarefa!");
+            }
+            let taskName = document.querySelector("#task-name").value;
 
-        let list = document.querySelector(".tasks-list");
-        document.querySelector(".section").appendChild(list);
-        let listElement = document.createElement("li");
-        listElement.setAttribute("class", "task-element")
-        list.appendChild(listElement);
-        let spanText = document.createElement("span");
-        spanText.setAttribute("class", "list-item-text");
-        listElement.appendChild(spanText);
+            let newTask = new Task(taskName);
 
-        spanText.innerText = newTask.taskName;
+            let list = document.querySelector(".tasks-list");
+            document.querySelector(".section").appendChild(list);
+            let listElement = document.createElement("li");
+            listElement.setAttribute("class", "task-element")
+            list.appendChild(listElement);
+            let spanText = document.createElement("span");
+            spanText.setAttribute("class", "list-item-text");
+            listElement.appendChild(spanText);
 
-        let spanButtons = document.createElement("span");
-        spanButtons.setAttribute("class", "task-buttons");
-        listElement.appendChild(spanButtons);
+            spanText.innerText = newTask.taskName;
 
-        let buttonDone = document.createElement("button");
-        buttonDone.setAttribute("class", 'list-button button-done')
-        buttonDone.setAttribute("onclick", "app.setDone(this)")
-        buttonDone.innerText = "marcar como feita";
-        spanButtons.appendChild(buttonDone);
+            let spanButtons = document.createElement("span");
+            spanButtons.setAttribute("class", "task-buttons");
+            listElement.appendChild(spanButtons);
 
-        let buttonRemove = document.createElement("button");
-        buttonRemove.setAttribute("class", "list-button button-remove");
-        buttonRemove.setAttribute("onclick", "app.removeTask(this)")
-        buttonRemove.innerText = "excluir";
-        spanButtons.appendChild(buttonRemove);
+            let buttonDone = document.createElement("button");
+            buttonDone.setAttribute("class", 'list-button button-done')
+            buttonDone.setAttribute("onclick", "app.setDone(this)")
+            buttonDone.innerText = "marcar como feita";
+            spanButtons.appendChild(buttonDone);
+
+            let buttonRemove = document.createElement("button");
+            buttonRemove.setAttribute("class", "list-button button-remove");
+            buttonRemove.setAttribute("onclick", "app.removeTask(this)")
+            buttonRemove.innerText = "excluir";
+            spanButtons.appendChild(buttonRemove);
+        } catch(e) {
+            alert(e.message);
+        }
 
         document.querySelector("#task-name").value = "";
     }

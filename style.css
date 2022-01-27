@@ -1,5 +1,6 @@
 * {
     font-family: 'Courier New', Courier, monospace;
+    box-sizing: border-box;
 }
 
 body {
@@ -9,7 +10,7 @@ body {
 
 .section {
     width: 70%;
-    height: 80vh;
+    min-height: 80vh;
     border-radius: 10px;
     margin: auto;
     background-color: white;
@@ -21,7 +22,7 @@ body {
     padding: 30px;
 }
 
-.addTask {
+.fill-task {
     display: flex;
     justify-content: space-between;
     margin-top: 50px;
@@ -29,7 +30,7 @@ body {
     margin-right: 10%;
 }
 
-#task {
+#task-name {
     border-top: 0;
     border-left: 0;
     border-right: 0;
@@ -41,18 +42,48 @@ body {
     padding-right: 10px;
 }
 
-#plus {
+button#plus {
     font-size: 16px;
     background-color: #0F111A;
     color: white;
     border: 0;
     padding: 12px;
-    border-radius: 10px
+    border-radius: 10px;
+    cursor: pointer;
 }
 
-#plus:hover {
-    cursor: pointer;
+button#plus:hover {
     background-color: #D8F3F9;
     color: #0F111A;
     transition: .2s;
+}
+
+.tasks-list {
+    margin-top: 50px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.task-element {
+    padding: 10px;
+}
+
+.task-element:last-child {
+    padding-bottom: 50px;
+}
+
+.list-button {
+    margin-left: 30px;
+    border: 0;
+    padding: 12px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.button-done {
+    background-color: #CDF1DB;
+}
+
+.button-remove {
+    background-color: #F9C7C7;
 }

@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="img/favicon-check.png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
     <script src="js/Task.js"></script>
-    <script src="js/app.js"></script>
+    <script src="js/App.js"></script>
     <title>TasksToDo!</title>
 </head>
 <body>
@@ -15,8 +17,8 @@
         <h3 class="title">Lista de Tarefas</h3>
 
         <div class="fill-task">
-            <input type="text" name="task-name" id="task-name" placeholder="Digite uma tarefa..." required>
-            <button id="plus" onclick="app.addTask()">Adicionar</button>
+            <input type="text" name="task-name" id="task-name" placeholder="Digite uma tarefa...">
+            <span id="element-add"><button id="plus" onclick="app.addTask()">Adicionar</button></span>
         </div>
 
         <ul class="tasks-list"></ul>

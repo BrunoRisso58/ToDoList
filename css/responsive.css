@@ -1,0 +1,81 @@
+@media screen and (max-width: 1000px) {
+
+    .section {
+        width: 85%
+    }
+
+    .list-button {
+        margin-left: 0;
+        margin-right: 30px;
+    }
+
+    .list-item-text {
+        margin-right: 30px;
+    }
+
+}
+
+@media screen and (max-width: 800px) {
+
+    .list-item-text {
+        display: block;
+    }
+
+    #task-name {
+        font-size: 12px;
+        width: 50%;
+    }
+
+}
+
+@media screen and (max-width: 620px) {
+
+    .fill-task {
+        display: block;
+        text-align: center
+    }
+
+    #element-add {
+        display: block;
+    }
+
+    #task-name {
+        font-size: 14px;
+        width:  70%;
+        padding: 10px;
+        margin-bottom: 30px;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+
+    .list-button {
+        font-size: 12px;
+    }
+
+    .button-done {
+        margin-bottom: 7px
+    }
+
+}
+
+@media screen and (max-width: 410px) {
+
+    #task-name {
+        width:  90%;
+    }
+
+    .list-button {
+        font-size: 12px;
+    }
+
+}
+
+@media screen and (max-width: 370px) {
+
+    .list-button {
+        width: 90%;
+    }
+
+}

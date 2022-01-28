@@ -4,13 +4,13 @@
 }
 
 body {
-    background-color: #D8F3F9;
+    background-color: #bbecf7;
     font-family: 'Courier New', Courier, monospace;
 }
 
 .section {
     width: 70%;
-    min-height: 80vh;
+    min-height: 90vh;
     border-radius: 10px;
     margin: auto;
     background-color: white;
@@ -20,7 +20,7 @@ body {
 .title {
     font-size: 30px;
     text-align: center;
-    padding: 30px;
+    padding: 50px;
 }
 
 .fill-task {
@@ -49,6 +49,7 @@ button#plus {
     color: white;
     border: 0;
     padding: 12px;
+    margin-right: 10px;
     border-radius: 10px;
     cursor: pointer;
 }
@@ -63,6 +64,7 @@ button#plus {
 
 .task-element {
     padding: 10px;
+    margin-bottom: 10px
 }
 
 .task-element:last-child {
@@ -79,7 +81,7 @@ button#plus {
 
 .button-done {
     background-color: #CDF1DB;
-    width: 25%;
+    min-width: 50px;
 }
 
 .button-done:hover {
